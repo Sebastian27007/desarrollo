@@ -1,34 +1,98 @@
+/* Estilo general */
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
+    text-align: center;
+    margin-top: 50px;
 }
 
-#minesweeper {
-    display: grid;
-    grid-template-columns: repeat(10, 30px);
-    grid-template-rows: repeat(10, 30px);
-    gap: 2px;
+h1, h2 {
+    color: #333;
 }
 
-.cell {
-    width: 30px;
-    height: 30px;
-    background-color: #ddd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Estilo de la pantalla de login */
+#loginScreen {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#username, #password {
+    padding: 10px;
+    margin: 10px;
+    font-size: 1em;
+    width: 200px;
+}
+
+#loginBtn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+}
+
+#loginBtn:hover {
+    background-color: #45a049;
+}
+
+#loginError {
+    margin-top: 10px;
+}
+
+/* Estilo del contenido principal (pantalla de administración) */
+#mainScreen {
+    display: none;
+}
+
+#adminFunctions button {
+    width: 250px;
+    margin: 10px;
+    padding: 12px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+}
+
+#adminFunctions button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo de las secciones */
+.section {
+    display: none;
+}
+
+#contentSection {
+    margin-top: 30px;
+}
+
+/* Estilo de los botones de las funcionalidades */
+#manageRoomsBtn, #manageReservationsBtn, #viewProfileBtn, #viewNotificationsBtn, #manageEventsBtn, #adminDashboardBtn {
+    margin: 20px;
+    padding: 15px;
+    background-color: #f1f1f1;
+    font-size: 1.1em;
     cursor: pointer;
 }
 
-.cell.mine.revealed {
-    background-color: red;
+#manageRoomsBtn:hover, #manageReservationsBtn:hover, #viewProfileBtn:hover, #viewNotificationsBtn:hover, #manageEventsBtn:hover, #adminDashboardBtn:hover {
+    background-color: #ddd;
 }
 
-.cell.revealed {
-    background-color: #bbb;
+/* Estilo de los botones de las salas */
+.roomButton {
+    margin: 10px;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.roomButton:hover {
+    background-color: #45a049;
 }
