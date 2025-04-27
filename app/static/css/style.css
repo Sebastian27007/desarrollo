@@ -1,0 +1,235 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: hsl(205, 69%, 58%); /* Fondo azul */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 36px;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #3498db;
+    font-size: 16px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Form Container */
+form {
+    background-color: #ffffff; /* Fondo blanco para los formularios */
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form input,
+form button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+form input[type="datetime-local"] {
+    background-color: #fafafa;
+}
+
+form button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #2980b9;
+}
+
+/* Sala Selection */
+.salas-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.sala-button {
+    display: none;
+}
+
+.sala-button + label {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.sala-button + label:hover {
+    transform: scale(1.05);
+}
+
+.sala-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 12px;
+    border: 2px solid #3498db;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sala-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 16px;
+    color: #777;
+}
+
+footer a {
+    color: #3498db;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Styles for the Index (Inicio) */
+.main-container {
+    background: linear-gradient(135deg, #3498db, #9b59b6); /* Fondo de degradado */
+    color: #fff;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+h1 {
+    font-size: 50px;
+    color: #fff;
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.buttons-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.action-button {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: center;
+}
+
+.action-button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Styles for Ver Reservas */
+.main-container {
+    background: #44b1ff; /* Fondo celeste para Ver Reservas */
+    color: #333;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 18px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 18px;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.back-button {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.back-button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}

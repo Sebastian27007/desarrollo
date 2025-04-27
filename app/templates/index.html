@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendador de Salas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="main-container">
+        <h1>Bienvenido al Sistema de Agendamiento de Salas de Trabajo</h1>
+
+        <div class="buttons-container">
+            <a href="{{ url_for('main.reserva') }}" class="action-button">Reservar una Sala</a>
+            <a href="{{ url_for('main.reservas_view') }}" class="action-button">Ver Reservas</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Reservas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="main-container">
+        <h1>Reservas de Salas</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Sala</th>
+                    <th>Fecha y Hora</th>
+                    <th>Usuario</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for reserva in reservas %}
+                <tr>
+                    <td>{{ reserva.sala }}</td>
+                    <td>{{ reserva.fecha }}</td>
+                    <td>{{ reserva.usuario }}</td>
+                    <td>
+                        <!-- Formulario de edición en línea -->
+                        <form method="POST" style="display:inline-block;">
+                            <input type="hidden" name="id" value="{{ reserva.id }}">
+                            <input type="text" name="sala" value="{{ reserva.sala }}" required>
+                            <input type="datetime-local" name="fecha" value="{{ reserva.fecha }}" required>
+                            <input type="text" name="usuario" value="{{ reserva.usuario }}" required>
+                            <button type="submit" class="action-button">Guardar Cambios</button>
+                        </form>
+
+                        <!-- Botón de eliminar -->
+                        <a href="{{ url_for('main.eliminar_reserva', id=reserva.id) }}" class="action-button" style="background-color: red;">Eliminar</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="footer-container">
+            <a href="{{ url_for('main.index') }}" class="back-button">Volver al inicio</a>
+        </div>
+    </div>
+</body>
+</html>

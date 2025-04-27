@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservar Sala</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Formulario de Reserva de Sala</h1>
+
+    <form method="POST">
+        <h2>Elige una Sala para tu Reunión</h2>
+
+        <div>
+            <label for="sala">Selecciona una Sala:</label>
+            <div class="salas-container">
+                <!-- Sala 1 -->
+                <input type="radio" id="sala1" name="sala" value="Sala 1" class="sala-button" required>
+                <label for="sala1">
+                    <img src="{{ url_for('static', filename='images/sala1.png') }}" alt="Sala 1" class="sala-image">
+                    Sala 1
+                </label>
+
+                <!-- Sala 2 -->
+                <input type="radio" id="sala2" name="sala" value="Sala 2" class="sala-button" required>
+                <label for="sala2">
+                    <img src="{{ url_for('static', filename='images/sala2.png') }}" alt="Sala 2" class="sala-image">
+                    Sala 2
+                </label>
+
+                <!-- Sala 3 -->
+                <input type="radio" id="sala3" name="sala" value="Sala 3" class="sala-button" required>
+                <label for="sala3">
+                    <img src="{{ url_for('static', filename='images/sala3.png') }}" alt="Sala 3" class="sala-image">
+                    Sala 3
+                </label>
+
+                <!-- Sala 4 -->
+                <input type="radio" id="sala4" name="sala" value="Sala 4" class="sala-button" required>
+                <label for="sala4">
+                    <img src="{{ url_for('static', filename='images/sala4.png') }}" alt="Sala 4" class="sala-image">
+                    Sala 4
+                </label>
+            </div>
+        </div>
+
+        <br>
+        <label for="fecha">Fecha y Hora:</label>
+        <input type="datetime-local" id="fecha" name="fecha" required>
+        <br>
+        <label for="usuario">Tu Nombre:</label>
+        <input type="text" id="usuario" name="usuario" required>
+        <br>
+        <button type="submit">Reservar</button>
+    </form>
+
+    <footer>
+        <p><a href="{{ url_for('main.index') }}">Volver al inicio</a></p>
+    </footer>
+</body>
+</html>
