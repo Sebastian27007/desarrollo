@@ -22,21 +22,21 @@
             <tbody>
                 {% for reserva in reservas %}
                 <tr>
-                    <td>{{ reserva.sala }}</td>
-                    <td>{{ reserva.fecha }}</td>
-                    <td>{{ reserva.usuario }}</td>
+                    <td>{{ reserva['sala'] }}</td>
+                    <td>{{ reserva['fecha'] }}</td>
+                    <td>{{ reserva['usuario'] }}</td>
                     <td>
                         <!-- Formulario de edición en línea -->
                         <form method="POST" style="display:inline-block;">
-                            <input type="hidden" name="id" value="{{ reserva.id }}">
-                            <input type="text" name="sala" value="{{ reserva.sala }}" required>
-                            <input type="datetime-local" name="fecha" value="{{ reserva.fecha }}" required>
-                            <input type="text" name="usuario" value="{{ reserva.usuario }}" required>
+                            <input type="hidden" name="id" value="{{ reserva['id'] }}">
+                            <input type="text" name="sala" value="{{ reserva['sala'] }}" required>
+                            <input type="datetime-local" name="fecha" value="{{ reserva['fecha'] }}" required>
+                            <input type="text" name="usuario" value="{{ reserva['usuario'] }}" required>
                             <button type="submit" class="action-button">Guardar Cambios</button>
                         </form>
 
                         <!-- Botón de eliminar -->
-                        <a href="{{ url_for('main.eliminar_reserva', id=reserva.id) }}" class="action-button" style="background-color: red;">Eliminar</a>
+                        <a href="{{ url_for('main.eliminar_reserva', id=reserva['id']) }}" class="action-button" style="background-color: red;">Eliminar</a>
                     </td>
                 </tr>
                 {% endfor %}
